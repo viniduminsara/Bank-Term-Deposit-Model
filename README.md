@@ -1,3 +1,3 @@
 # Bank Term Deposit Prediction Model
 
-## DEVELOPMENT branch
+## RELEASE branch
