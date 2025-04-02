@@ -1,10 +1,11 @@
-FROM public.ecr.aws/sam/build-python3.8:1.121.0-20240730174605
-#HORKDIR /python-docker
+# Use an official Python runtime as a parent image
+FROM python:3.9
 
-COPY requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt
-
+# Copy the current directory contents into the container
 COPY . .
 
-ENTRYPOINT python app.py
-#CMD [ "python3", "-m" . "flask", "run", " -- host-0.0.0,0"]
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Define the command to run the application
+CMD ["python", "app.py"]
