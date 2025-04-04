@@ -9,8 +9,8 @@ function predict() {
     const loan = document.getElementById("loan").value;
 
     // Input validation
-    if (isNaN(age) || age < 0 || age > 120) {
-        Swal.fire("Error", "Age must be between 0 and 120!", "warning");
+    if (isNaN(age) || age < 18 || age > 120) {
+        Swal.fire("Error", "Age must be between 18 and 120!", "warning");
         return;
     }
     if (!job || !marital || !education || !creditDefault || !housing || !loan) {
